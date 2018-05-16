@@ -11,7 +11,16 @@ class SingleItem extends Component{
 
     render(){
         console.log('single propz:', this.props);
-        const {title, details} = this.props.item;
+        const {title, details, created} = this.props.item;
+        console.log(this.props.item);
+
+        const time = new Date(parseInt(created));
+        console.log(time.toDateString());
+        // console.log(created.toString());
+        // created = new Date (parseInt(created));
+        // const time = new Date(1526343989774);
+        // console.log(time[0]);
+        
 
         return( 
         <div>
@@ -20,6 +29,7 @@ class SingleItem extends Component{
                 <Link to="/" className="btn pink lighten-1">View Full List</Link>
             </div>
             <h4>{title}</h4>
+            <p>Created: {time.toUTCString()} at {time.toLocaleTimeString()}</p>
             <p>{details}</p>
         </div>)
     }
