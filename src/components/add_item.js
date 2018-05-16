@@ -6,11 +6,14 @@ import {addtoDoItem} from '../actions';
 
 class AddItem extends Component {
     async handleAddItem(values){
+        try{
+            await this.props.addtoDoItem(values);
+            this.props.history.push('/');
+        }catch(err){
+            console.warn(err.message);
+        }
         console.log('Form Values:', values);
-        await this.props.addtoDoItem(values);
-
-        this.props.history.push('/');
-    }
+       }
     
     renderInput({label, input, meta: {touched, error}}){
         return(
