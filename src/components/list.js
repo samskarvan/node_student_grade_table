@@ -10,6 +10,9 @@ class List extends Component {
     }
     render(){
         const {listData} = this.props;
+        if(!listData.length){
+            return <h3 className="text-center">Loadin'</h3>;
+        }
         const listItems = listData.map((item, index)=>{
             console.log(item);
             return(
