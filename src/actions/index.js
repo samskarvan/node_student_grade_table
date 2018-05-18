@@ -31,6 +31,12 @@ export function getSingleItem(id){
 
 // To toggle complete of an item:
 // axios.put(`${BASE_URL}/todos/${id + API_KEY}`);
-
+export function toggleCompleteItem(id){
+    const response = axios.put(`${BASE_URL}/todos/${id+API_KEY}`);
+    return{
+        type: types.TOGGLE_COMPLETE,
+        payload: response
+    }
+}
 // To Delete an item:
 // axios.delete(`${BASE_URL}/todos/${id + API_KEY}`);
