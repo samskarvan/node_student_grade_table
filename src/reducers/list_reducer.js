@@ -16,6 +16,9 @@ export default (state=DEFAULT_STATE, action)=>{
         case types.TOGGLE_COMPLETE:
                 console.log('TOGGLE COMPLETE ACTION:', action);
                 return {...state, single: action.payload.data.todo};
+
+        case types.CLEAR_SINGLE_ITEM:
+            return{...state, single: {}};
         default:
         return state;
     }
