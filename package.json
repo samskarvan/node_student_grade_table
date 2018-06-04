@@ -1,13 +1,7 @@
 {
-<<<<<<< HEAD
   "name": "node_student_grade_table",
   "version": "1.0.0",
   "description": "Student Grade Table built with Node and React JS",
-=======
-  "name": "todo-list-with-react-and-redux",
-  "version": "1.0.0",
-  "description": "Todo list made with React and Redux",
->>>>>>> ae0df5a377e8edea35c99b85d38be2d60b6e8f7b
   "main": "index.js",
   "scripts": {
     "start": "node dev_server.js",
@@ -18,11 +12,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-<<<<<<< HEAD
     "url": "https://github.com/samskarvan/node_student_grade_table.git"
-=======
-    "url": "https://github.com/samskarvan/todo_list_redux.git"
->>>>>>> ae0df5a377e8edea35c99b85d38be2d60b6e8f7b
   },
   "dependencies": {
     "axios": "^0.18.0",
